@@ -31,11 +31,11 @@ body {
   left: 40px;
 }
 
-.header .logo-box .logo {
+.header .logo {
   height: 35px;
 }
 
-.header .text-box {
+.text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -43,22 +43,56 @@ body {
           transform: translate(-50%, -50%);
 }
 
-.header .text-box .heading-primary {
+.heading-primary {
   color: #fff;
   text-transform: uppercase;
 }
 
-.header .text-box .heading-primary .heading-primary-main {
+.heading-primary .heading-primary-main {
   display: block;
   letter-spacing: 35px;
+  -webkit-animation-name: moveInLeft;
+  -webkit-animation-duration: 5s;
   font-size: 60px;
   font-width: 400;
 }
 
-.header .text-box .heading-primary .heading-primary-sub {
+.heading-primary .heading-primary-sub {
   display: block;
   letter-spacing: 15px;
+  -webkit-animation-name: moveInRight;
+  -webkit-animation-duration: 5s;
   font-size: 20px;
   font-width: 700;
+}
+
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  80% {
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  80% {
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */
